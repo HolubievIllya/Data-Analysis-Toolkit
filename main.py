@@ -115,3 +115,7 @@ def insertion_sort(arr: list) -> list:
             position = position - 1
         arr[position] = current_value
     return arr
+
+
+def print():
+    pass
