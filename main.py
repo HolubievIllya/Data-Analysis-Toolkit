@@ -104,3 +104,14 @@ def covariance(data_x: list, data_y: list) -> float:
     sub_x = [i - mean_x for i in data_x]
     sub_y = [i - mean_y for i in data_y]
     return sum([sub_x[i] * sub_y[i] for i in range(len(sub_x))]) / (len(data_x) - 1)
+
+
+def insertion_sort(arr: list) -> list:
+    for index in range(1, len(arr)):
+        current_value = arr[index]
+        position = index
+        while position > 0 and arr[position - 1] > current_value:
+            arr[position] = arr[position - 1]
+            position = position - 1
+        arr[position] = current_value
+    return arr
